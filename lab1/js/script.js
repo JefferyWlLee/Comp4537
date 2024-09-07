@@ -1,6 +1,6 @@
 const MAXHEX = 16777215;
 const HEXADECIMAL = 16;
-const RANDOMCOLOR = `#${Math.floor(Math.random() * MAXHEX).toString(HEXADECIMAL)}`; // Generate random color
+const HEX_SYMBOL = `#`; // hex symbol for color
 const MAXX = window.innerWidth - 150; // Leave 150px padding on the right
 const MAXY = window.innerHeight - 150; // Leave 150px padding on the bottom
 
@@ -33,7 +33,7 @@ class Button {
   }
 
   getRandomColor() {
-    return RANDOMCOLOR; // Generate random color
+    return HEX_SYMBOL+ `${Math.floor(Math.random() * MAXHEX).toString(HEXADECIMAL)}`; // Generate random color
   }
 
   // Method to set button at a random position within the window bounds
