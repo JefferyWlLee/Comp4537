@@ -75,7 +75,7 @@ class ButtonGame {
     this.maxScrambles = numButtons;
     this.correctClicks = 0;
     this.interval = null;
-    this.isScrambling = false; // Flag to track if scrambling is in progress
+    this.isScrambling = true; // Flag to track if scrambling is in progress
   }
 
   startGame() {
