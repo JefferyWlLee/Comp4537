@@ -1,3 +1,9 @@
+const MAXHEX = 16777215;
+const HEXADECIMAL = 16;
+const RANDOMCOLOR = `#${Math.floor(Math.random() * MAXHEX).toString(HEXADECIMAL)}`; // Generate random color
+const MAXX = window.innerWidth - 150; // Leave 150px padding on the right
+const MAXY = window.innerHeight - 150; // Leave 150px padding on the bottom
+
 class Button {
   constructor(id, order, gameInstance) {
     this.id = id; // Unique identifier for each button
@@ -14,9 +20,7 @@ class Button {
     this.buttonElement.style.width = '10em';
     this.buttonElement.style.position = 'relative'; // Initially, position is relative for inline layout
     this.buttonElement.onclick = () => this.handleClick(); // Set click handler
-     // Calculate maximum X and Y positions, subtracting button width/height and a small padding
-    this.maxX = window.innerWidth - 150; // Leave 150px padding on the right
-    this.maxY = window.innerHeight - 150; // Leave 150px padding on the bottom
+
 
   }
 
@@ -29,7 +33,7 @@ class Button {
   }
 
   getRandomColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Generate random color
+    return RANDOMCOLOR; // Generate random color
   }
 
   // Method to set button at a random position within the window bounds
@@ -37,8 +41,8 @@ class Button {
     // Calculate maximum X and Y positions, subtracting button width/height and a small padding
     
 
-    const randomX = Math.floor(Math.random() * this.maxX);
-    const randomY = Math.floor(Math.random() * this.maxY);
+    const randomX = Math.floor(Math.random() * MAXX);
+    const randomY = Math.floor(Math.random() * MAXY);
 
     // Set button's position
     this.buttonElement.style.left = `${randomX}px`;
