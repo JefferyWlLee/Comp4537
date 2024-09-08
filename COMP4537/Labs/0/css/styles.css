@@ -26,3 +26,8 @@ button {
 .scramble button {
   position: absolute;
 }
+
+#goButton {
+  width: 3em;
+  height: 2em;
+}
