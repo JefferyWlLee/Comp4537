@@ -1,3 +1,5 @@
+//chatgpt was used in the development of this code
+
 const MAXHEX = 16777215;
 const HEXADECIMAL = 16;
 const HEX_SYMBOL = `#`; // hex symbol for color
