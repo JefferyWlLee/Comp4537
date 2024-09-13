@@ -3,8 +3,7 @@
 const MAXHEX = 16777215;
 const HEXADECIMAL = 16;
 const HEX_SYMBOL = `#`; // hex symbol for color
-const MAXX = window.innerWidth - 150; // Leave 150px padding on the right
-const MAXY = window.innerHeight - 150; // Leave 150px padding on the bottom
+
 
 class Button {
   constructor(id, order, gameInstance) {
@@ -41,7 +40,8 @@ class Button {
   // Method to set button at a random position within the window bounds
   placeButtonAtRandom() {
     // Calculate maximum X and Y positions, subtracting button width/height and a small padding
-    
+    const MAXX = window.innerWidth - 150; // Leave 150px padding on the right
+    const MAXY = window.innerHeight - 150; // Leave 150px padding on the bottom
 
     const randomX = Math.floor(Math.random() * MAXX);
     const randomY = Math.floor(Math.random() * MAXY);
